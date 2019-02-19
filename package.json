@@ -1,0 +1,48 @@
+{
+    "name": "queryplan-show",
+    "displayName": "queryplan.show",
+    "description": "Visualize query plans with queryplan.show",
+    "version": "0.0.1",
+    "publisher": "phil-scott",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/phil-scott-78/azure-data-studio-queryplan-show"
+    },
+    "bugs": {
+        "url": "https://github.com/phil-scott-78/azure-data-studio-queryplan-show/issues"
+    },
+    "engines": {
+        "vscode": "^1.31.0",
+        "sqlops": "*"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.queryplanShow"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.queryplanShow",
+                "title": "QueryPlan.Show"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install && node ./node_modules/sqlops/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "@types/mocha": "^2.2.42",
+        "@types/node": "^7.0.43",
+        "sqlops": "github:anthonydresser/sqlops-extension-sqlops",
+        "tslint": "^5.8.0",
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6"
+    }
+}
