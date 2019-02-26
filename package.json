@@ -2,7 +2,7 @@
     "name": "queryplan-show",
     "displayName": "queryplan.show",
     "description": "Visualize query plans with queryplan.show",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "phil-scott",
     "repository": {
         "type": "git",
