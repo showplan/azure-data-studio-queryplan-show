@@ -2,7 +2,7 @@
     "name": "queryplan-show",
     "displayName": "queryplan.show",
     "description": "Visualize query plans with queryplan.show",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "publisher": "phil-scott",
     "repository": {
         "type": "git",
@@ -12,7 +12,7 @@
         "url": "https://github.com/phil-scott-78/azure-data-studio-queryplan-show/issues"
     },
     "engines": {
-        "vscode": "^1.31.0",
+        "vscode": "*",
         "sqlops": "*"
     },
     "categories": [
@@ -39,11 +39,11 @@
         "package": "vsce package"
     },
     "devDependencies": {
-        "@types/mocha": "^2.2.42",
-        "@types/node": "^7.0.43",
+        "@types/mocha": "^5.2.6",
+        "@types/node": "^11.11.3",
         "sqlops": "github:anthonydresser/sqlops-extension-sqlops",
-        "tslint": "^5.8.0",
-        "typescript": "^2.6.1",
-        "vscode": "^1.1.6"
+        "tslint": "^5.14.0",
+        "typescript": "^3.3.3333",
+        "vscode": "^1.1.30"
     }
 }
