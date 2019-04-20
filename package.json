@@ -12,7 +12,7 @@
         "url": "https://github.com/phil-scott-78/azure-data-studio-queryplan-show/issues"
     },
     "engines": {
-        "vscode": "*",
+        "vscode": "^1.20.0",
         "sqlops": "*"
     },
     "categories": [
@@ -21,7 +21,7 @@
     "activationEvents": [
         "onCommand:extension.queryplanShow"
     ],
-    "main": "./out/extension",
+    "main": "./dist/extension",
     "contributes": {
         "commands": [
             {
@@ -31,19 +31,20 @@
         ]
     },
     "scripts": {
-        "vscode:prepublish": "npm run compile",
-        "compile": "tsc -p ./",
-        "watch": "tsc -watch -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install && node ./node_modules/sqlops/bin/install",
-        "test": "npm run compile && node ./node_modules/vscode/bin/test",
+        "vscode:prepublish": "webpack --mode production",
+        "compile": "webpack --mode none",
+        "watch": "webpack --mode none --watch",
+        "test-compile": "tsc -p ./",
         "package": "vsce package"
     },
     "devDependencies": {
         "@types/mocha": "^5.2.6",
-        "@types/node": "^11.11.3",
+        "@types/node": "^11.13.6",
         "sqlops": "github:anthonydresser/sqlops-extension-sqlops",
-        "tslint": "^5.14.0",
-        "typescript": "^3.3.3333",
-        "vscode": "^1.1.30"
+        "ts-loader": "^5.3.3",
+        "typescript": "^3.4.4",
+        "vscode": "^1.1.33",
+        "webpack": "^4.30.0",
+        "webpack-cli": "^3.3.0"
     }
 }

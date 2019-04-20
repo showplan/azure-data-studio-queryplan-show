@@ -1,34 +1,25 @@
 // A launch configuration that compiles the extension and then opens it inside a new window
-// Use IntelliSense to learn about possible attributes.
-// Hover to view descriptions of existing attributes.
-// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-
-// To debug the extension:
-// 1. please install the "SQL Operations Studio Debug" extension into VSCode
-// 2. Ensure sqlops is added to your path:
-//    - open SQL Operations Studio
-//    - run the command "Install 'sqlops' command in PATH"
 {
-	"version": "0.2.0",
+    "version": "0.2.0",
     "configurations": [
         {
-            "name": "Extension",
-            "type": "sqlopsExtensionHost",
+            "name": "Launch Extension",
+            "type": "extensionHost",
             "request": "launch",
-            "runtimeExecutable": "azuredatastudio",
+            "runtimeExecutable": "${execPath}",
             "args": [
                 "--extensionDevelopmentPath=${workspaceFolder}"
             ],
             "outFiles": [
-                "${workspaceFolder}/out/**/*.js"
+                "${workspaceFolder}/dist/**/*.js"
             ],
             "preLaunchTask": "npm: watch"
         },
         {
             "name": "Extension Tests",
-            "type": "sqlopsExtensionHost",
+            "type": "extensionHost",
             "request": "launch",
-            "runtimeExecutable": "azuredatastudio",
+            "runtimeExecutable": "${execPath}",
             "args": [
                 "--extensionDevelopmentPath=${workspaceFolder}",
                 "--extensionTestsPath=${workspaceFolder}/out/test"
@@ -36,7 +27,7 @@
             "outFiles": [
                 "${workspaceFolder}/out/test/**/*.js"
             ],
-            "preLaunchTask": "npm: watch"
+            "preLaunchTask": "npm: test-compile"
         }
     ]
 }
