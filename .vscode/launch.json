@@ -4,9 +4,9 @@
     "configurations": [
         {
             "name": "Launch Extension",
-            "type": "extensionHost",
+            "type": "sqlopsExtensionHost",
             "request": "launch",
-            "runtimeExecutable": "${execPath}",
+            "runtimeExecutable": "azuredatastudio",
             "args": [
                 "--extensionDevelopmentPath=${workspaceFolder}"
             ],
@@ -17,9 +17,9 @@
         },
         {
             "name": "Extension Tests",
-            "type": "extensionHost",
+            "type": "sqlopsExtensionHost",
             "request": "launch",
-            "runtimeExecutable": "${execPath}",
+            "runtimeExecutable": "azuredatastudio",
             "args": [
                 "--extensionDevelopmentPath=${workspaceFolder}",
                 "--extensionTestsPath=${workspaceFolder}/out/test"

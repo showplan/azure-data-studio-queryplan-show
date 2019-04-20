@@ -21,10 +21,10 @@ export function activate(context: vscode.ExtensionContext) {
                         enableScripts: true                
                     }                    
                 );
-
-                const filePath = vscode.Uri.file(path.join(context.extensionPath, 'app', 'index.html'));
+                
+                const filePath = vscode.Uri.file(path.join(context.extensionPath, 'dist', 'index.html'));
                 vscode.workspace.openTextDocument(filePath).then(doc => {
-                    const baseUrl = vscode.Uri.file(path.join(context.extensionPath, 'app')).with({ scheme: 'vscode-resource' });
+                    const baseUrl = vscode.Uri.file(path.join(context.extensionPath, 'dist')).with({ scheme: 'vscode-resource' });
                     const base = `<base href="${baseUrl}/">`;
                     const originalHtml = doc.getText();
                     var newHtml = originalHtml.replace('<head>', '<head>' + base);

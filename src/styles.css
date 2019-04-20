@@ -2,8 +2,6 @@ body.vscode-light, body.vscode-dark, body.vscode-high-contrast {
     --background: var(--vscode-editor-background);
     --foreground: var(--vscode-editor-foreground);
     --alt-background: var(--vscode-editorGroupHeader-tabsBackground);
-    --border: rgba(0,0,0,.25);
-    --alt-border: rgba(0,0,0,.2);
     --red: var(--vscode-terminal-ansiBrightRed);
     --dark-red: var(--vscode-terminal-ansiRed);
     --green: var(--vscode-terminal-ansiBrightGreen);
@@ -13,4 +11,14 @@ body.vscode-light, body.vscode-dark, body.vscode-high-contrast {
     --orange: var(--vscode-terminal-ansiBrightYellow);
     --brown: var(--vscode-terminal-ansiYellow);
     --grey: var(--vscode-terminal-ansiBrightBlack);
+}
+
+body.vscode-light {
+    --border: rgba(0,0,0,.25);
+    --alt-border: rgba(0,0,0,.2);
+}
+
+body.vscode-dark, body.vscode-high-contrast {
+    --border: rgba(255,255,255,.15);
+    --alt-border: rgba(255,255,255,.05);
 }
