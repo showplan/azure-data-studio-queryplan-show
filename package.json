@@ -40,11 +40,20 @@
     "devDependencies": {
         "@types/mocha": "^5.2.6",
         "@types/node": "^11.13.6",
+        "css-loader": "^2.1.1",
         "sqlops": "github:anthonydresser/sqlops-extension-sqlops",
         "ts-loader": "^5.3.3",
         "typescript": "^3.4.4",
         "vscode": "^1.1.33",
         "webpack": "^4.30.0",
         "webpack-cli": "^3.3.0"
+    },
+    "dependencies": {
+        "normalize.css": "^8.0.1",
+        "showplan-vue": "^1.0.2",
+        "vue": "^2.6.10",
+        "vue-loader": "^15.7.0",
+        "vue-property-decorator": "^8.1.0",
+        "vue-template-compiler": "^2.6.10"
     }
 }

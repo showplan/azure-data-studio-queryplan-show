@@ -1,8 +1,10 @@
 {
 	"compilerOptions": {
 		"module": "commonjs",
-		"target": "es6",
+		"target": "es5",
 		"outDir": "out",
+		"experimentalDecorators": true,
+		"moduleResolution": "node",
 		"lib": [
 			"es6"
 		],
@@ -10,7 +12,10 @@
 		"rootDir": "src"
     },
     "include": [
-        "src",
+				"src/**/*.ts",
+        "src/**/*.d.ts",
+        "src/**/*.tsx",
+        "src/**/*.vue",
         "node_modules/vscode/vscode.d.ts",
         "node_modules/vscode/lib"
     ],

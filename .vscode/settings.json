@@ -5,5 +5,10 @@
     },
     "search.exclude": {
         "out": true // set this to false to include "out" folder in search results
+    },
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#b52e31",
+        "statusBarItem.hoverBackground": "#d04649",
+        "statusBar.foreground": "#e7e7e7"
     }
 }
