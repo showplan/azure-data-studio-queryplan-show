@@ -4,11 +4,13 @@
             v-if="showPlan !== undefined"
             :show-plan="showPlan"
         />
-    </div>    
+    </div>
 </template>
 
 <script lang='ts'>
-import { Vue, Component, Prop, Watch } from 'vue-property-decorator';
+import {
+    Vue, Component,
+} from 'vue-property-decorator';
 import { ShowPlanParser, ShowPlanXML } from 'showplan-js';
 import { Statement as ShowplanStatement } from 'showplan-vue';
 
@@ -17,8 +19,8 @@ import { Statement as ShowplanStatement } from 'showplan-vue';
     data() {
         return {
             showPlan: undefined,
-        }        
-    }
+        };
+    },
 })
 export default class extends Vue {
     public showPlan: ShowPlanXML | undefined;
@@ -28,9 +30,9 @@ export default class extends Vue {
     }
 
     mounted() {
-        // VS Code will dynamically add aquireVsCodeApi. 
+        // VS Code will dynamically add aquireVsCodeApi.
         // Since it isn't valid until then we'll need
-        // to invoke it dynamically. 
+        // to invoke it dynamically.
         // eslint-disable-next-line no-new-func
         const vsCodeFunction = Function(`
             if (typeof acquireVsCodeApi == 'function') {
@@ -57,4 +59,3 @@ export default class extends Vue {
     }
 }
 </script>
-
