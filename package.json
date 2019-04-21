@@ -2,7 +2,7 @@
     "name": "queryplan-show",
     "displayName": "queryplan.show",
     "description": "Visualize query plans with queryplan.show",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "publisher": "phil-scott",
     "repository": {
         "type": "git",
@@ -51,7 +51,8 @@
         "html-webpack-plugin": "^3.2.0",
         "sqlops": "github:anthonydresser/sqlops-extension-sqlops",
         "ts-loader": "^5.3.3",
-        "typescript": "^3.4.4",       
+        "typescript": "^3.4.4",
+        "vscode": "^1.1.33",
         "vue-eslint-parser": "^6.0.3",
         "webpack": "^4.30.0",
         "webpack-cli": "^3.3.0"
@@ -61,7 +62,6 @@
         "normalize.css": "^8.0.1",
         "showplan-js": "^1.0.1",
         "showplan-vue": "^1.0.2",
-        "vscode": "^1.1.33",
         "vue": "^2.6.10",
         "vue-loader": "^15.7.0",
         "vue-property-decorator": "^8.1.0",
