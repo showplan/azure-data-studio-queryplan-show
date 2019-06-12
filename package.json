@@ -12,7 +12,7 @@
         "url": "https://github.com/phil-scott-78/azure-data-studio-queryplan-show/issues"
     },
     "engines": {
-        "vscode": "^1.20.0",
+        "vscode": "^1.35.0",
         "sqlops": "*"
     },
     "categories": [
@@ -31,40 +31,42 @@
         ]
     },
     "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install && node ./node_modules/sqlops/bin/install",
         "vscode:prepublish": "webpack --mode production",
         "compile": "webpack --mode none",
         "watch": "webpack --mode none --watch",
         "test-compile": "tsc -p ./",
-        "package": "vsce package",
+        "package": "vsce package",        
         "lint": "eslint . --ext .ts,.js,.vue"
     },
     "devDependencies": {
-        "@types/mocha": "^5.2.6",
-        "@types/node": "^11.13.6",
-        "@typescript-eslint/eslint-plugin": "^1.7.0",
-        "css-loader": "^2.1.1",
+        "@types/mocha": "^5.2.7",
+        "@types/node": "^12.0.8",
+        "@typescript-eslint/eslint-plugin": "^1.10.2",
+        "@typescript-eslint/parser": "^1.10.2",
+        "css-loader": "^3.0.0",
         "eslint": "^5.16.0",
         "eslint-config-airbnb-base": "^13.1.0",
         "eslint-import-resolver-typescript": "^1.1.1",
-        "eslint-plugin-import": "^2.17.2",
+        "eslint-plugin-import": "^2.17.3",
         "eslint-plugin-vue": "^5.2.2",
         "html-webpack-plugin": "^3.2.0",
+        "mini-css-extract-plugin": "^0.7.0",
         "sqlops": "github:anthonydresser/sqlops-extension-sqlops",
-        "ts-loader": "^5.3.3",
-        "typescript": "^3.4.4",
-        "vscode": "^1.1.33",
-        "vue-eslint-parser": "^6.0.3",
-        "webpack": "^4.30.0",
-        "webpack-cli": "^3.3.0"
+        "ts-loader": "^6.0.2",
+        "typescript": "^3.5.1",
+        "vscode": "^1.1.34",
+        "vue-eslint-parser": "^6.0.4",
+        "vue-loader": "^15.7.0",
+        "webpack": "^4.33.0",
+        "webpack-cli": "^3.3.4"
     },
-    "dependencies": {
-        "mini-css-extract-plugin": "^0.6.0",
+    "dependencies": {        
         "normalize.css": "^8.0.1",
         "showplan-js": "^1.0.1",
-        "showplan-vue": "^1.0.2",
+        "showplan-vue": "^1.0.4",
         "vue": "^2.6.10",
-        "vue-loader": "^15.7.0",
-        "vue-property-decorator": "^8.1.0",
+        "vue-property-decorator": "^8.1.1",
         "vue-template-compiler": "^2.6.10"
     }
 }
